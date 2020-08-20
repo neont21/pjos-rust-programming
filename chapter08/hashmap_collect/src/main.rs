@@ -12,4 +12,8 @@ fn main() {
 
     let mut score: HashMap<_, _> =
         teams.iter().zip(initial_scores.iter()).collect();
+
+    for (t, s) in &score {
+        println!("{}: {}", t, s);
+    }
 }
