@@ -1,14 +1,14 @@
-use summary_trait::{Summary, Tweet, NewsArticle};
+use summary_trait::{Tweet, NewsArticle};
 
 fn main() {
-    let tweet = Tweet {
+    let _tweet = Tweet {
         username: String::from("Peter J"),
         content: String::from("여러분 Rust하자 Rust!!"),
         reply: false,
         retweet: false,
     };
 
-    println!("1 new tweet: {}", tweet.summarize());
+    //println!("1 new tweet: {}", tweet.summarize());
 
     let article = NewsArticle {
         headline: String::from("Peter broken Hazzi's Windows"),
@@ -18,5 +18,7 @@ fn main() {
             and install Linux on Hazzi's laptop."),
     };
 
-    println!("New article available! {}", article.summarize());
+    //println!("New article available! {}", article.summarize());
+
+    summary_trait::notify(&article);
 }
