@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn largest<T>(list: &[T]) -> T
-    where T: PartialOrd
+    where T: PartialOrd + Copy
 {
     let mut largest = list[0];
 
