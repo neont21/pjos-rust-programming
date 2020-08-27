@@ -5,7 +5,8 @@ pub struct Rectanlge {
 
 impl Rectanlge {
     pub fn can_hold(&self, other: &Rectanlge) -> bool {
-        self.length > other.length && self.width > other.width
+        //self.length > other.length && self.width > other.width
+        self.length < other.length && self.width < other.width
     }
 }
 
