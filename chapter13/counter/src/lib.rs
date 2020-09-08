@@ -33,3 +33,13 @@ fn calling_next_directly() {
     assert_eq!(counter.next(), Some(5));
     assert_eq!(counter.next(), None);
 }
+
+#[test]
+fn using_another_iterator_trait_methods() {
+    let sum: u32 = Counter::new().zip(Counter::new().skip(1))
+        .map(|(a, b)| a * b)
+        .filter(|x| x % 3 == 0)
+        .sum();
+    
+    assert_eq!(18, sum);
+}
