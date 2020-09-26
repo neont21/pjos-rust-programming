@@ -1,0 +1,12 @@
+[package]
+name = "hello_macro_derive"
+version = "0.1.0"
+authors = ["Peter J <peter.j@kakao.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1.0.42"
+quote = "1.0.7"
